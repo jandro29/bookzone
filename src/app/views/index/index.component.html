@@ -1,0 +1,54 @@
+<div>
+  <div class="h-screen body" style="justify-content: center; align-items: center; display: flex;">
+
+    <div class="d-flex flex-column justify-content-center w-100 h-100">
+
+      <div class="w-[400px] h-[400px] bg-teal-500 z-20 flex items-center justify-center rounded-lg">
+        <div class="flex flex-col space-y-10 z-30">
+          <div class="flex justify-center">
+            <div class="flex flex-col space-y-6">
+              <div class="flex justify-center text-[25px]">
+                <h1 class="text-white">Book <span style=" color: rgb(7 89 133);"><b>Zone</b></span></h1>
+              </div>
+              <form>
+                <mat-form-field appearance="fill" class="w-[100%]">
+                  <mat-label>Usuario</mat-label>
+                  <input appearance="fill" type="email" matInput [formControl]="emailFormControl"
+                    [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com">
+                  <mat-hint>Ingrese su usuario</mat-hint>
+                  <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Por favor ingresa un usuario valida
+                  </mat-error>
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    El usuario <strong>es necesario</strong>
+                  </mat-error>
+                </mat-form-field>
+              </form>
+
+              <form>
+                <mat-form-field appearance="fill">
+                  <mat-label>Enter your password</mat-label>
+                  <input matInput [type]="hide ? 'password' : 'text'">
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                </mat-form-field>
+              </form>
+            </div>
+          </div>
+
+          <button class="bg-white h-[40px] flex items-center justify-center rounded-lg
+
+          ">
+            Ingresar
+          </button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+</div>
