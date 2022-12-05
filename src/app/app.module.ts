@@ -20,6 +20,7 @@ import { ClientesComponent } from './views/opciones/clientes/clientes.component'
 import { UsuariosComponent } from './views/opciones/usuarios/usuarios.component';
 import { RepotventComponent } from './views/opciones/repotvent/repotvent.component';
 import { GenpedComponent } from './views/opciones/genped/genped.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 const routes: Routes = [
@@ -91,7 +92,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     HttpClientModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
