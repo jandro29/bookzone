@@ -21,6 +21,7 @@ import { UsuariosComponent } from './views/opciones/usuarios/usuarios.component'
 import { RepotventComponent } from './views/opciones/repotvent/repotvent.component';
 import { GenpedComponent } from './views/opciones/genped/genped.component';
 import {MatTableModule} from '@angular/material/table';
+import { FormModule } from '@coreui/angular';
 
 
 const routes: Routes = [
@@ -93,7 +94,8 @@ const routes: Routes = [
     HttpClientModule,
     MatIconModule,
     MatMenuModule,
-    MatTableModule
+    MatTableModule,
+    FormModule
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
